@@ -8,17 +8,17 @@ from collections import defaultdict
 from botocore.exceptions import NoCredentialsError, PartialCredentialsError, ClientError
 
 # AWS profile name
-aws_profile = 'PowerUserAccess-484850288072'
+aws_profile = 'PowerUserAccess'
 
 # S3 client using specific profile
 session = boto3.Session(profile_name=aws_profile)
 s3 = session.client('s3')
 
 # AWS S3 bucket and prefixes
-source_bucket = 'gulp-data-vault-decode'
+source_bucket = ''
 source_prefix = '4037-updated-10aug/'
 
-destination_bucket = 'gulp-data-vault-decode'
+destination_bucket = ''
 destination_prefix = '4037-updated-10aug-merged/'
 
 # Temporary directory to store downloaded files
